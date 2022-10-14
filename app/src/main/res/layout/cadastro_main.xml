@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0B182C"
+    tools:context=".TelaCadastro">
+
+   <ImageView
+       android:id="@+id/cadastro"
+       android:layout_width="200dp"
+       android:layout_height="200dp"
+       android:src="@drawable/cadastro"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toTopOf="parent"/>
+
+   <EditText
+       android:id="@+id/edNomeCompleto"
+       android:layout_width="390dp"
+       android:layout_height="50dp"
+       android:layout_marginStart="5dp"
+       android:hint="Nome Completo"
+       android:inputType="text"
+       android:textColor="#FFFFFF"
+       android:textColorHint="#FFFFFF"
+       android:textStyle="italic"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/cadastro" />
+
+   <EditText
+       android:id="@+id/edEmail"
+       android:layout_width="390dp"
+       android:layout_height="50dp"
+       android:layout_marginStart="5dp"
+       android:layout_marginTop="5dp"
+       android:hint="E-mail"
+       android:inputType="textEmailAddress"
+       android:textColor="#FFFFFF"
+       android:textColorHint="#FFFFFF"
+       android:textStyle="italic"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/edNomeCompleto" />
+
+   <EditText
+       android:id="@+id/edSenha"
+       android:layout_width="390dp"
+       android:layout_height="50dp"
+       android:layout_marginStart="5dp"
+       android:layout_marginTop="15dp"
+       android:hint="Senha"
+       android:inputType="textPassword"
+       android:textColor="#FFFFFF"
+       android:textColorHint="#FFFFFF"
+       android:textStyle="italic"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/edEmail" />
+
+   <Button
+       android:id="@+id/btCadastrar"
+       android:layout_width="180dp"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="70dp"
+       android:layout_marginTop="10dp"
+       android:text="cadastrar"
+       android:textStyle="italic"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/edSenha" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

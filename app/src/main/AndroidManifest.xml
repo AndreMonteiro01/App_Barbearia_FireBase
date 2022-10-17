@@ -11,7 +11,7 @@
         android:theme="@style/Theme.App_Barbearia_FireBase">
 
         <activity
-            android:name=".TelaLogin"
+            android:name=".TelaCadastro"
             android:exported="true"
             android:label="@string/app_name">
             <intent-filter>
@@ -20,6 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".TelaLogin"/>
 
     </application>
 

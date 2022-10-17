@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,51 +14,62 @@
     android:layout_height="match_parent"
     android:background="#0B182C"
     tools:context=".TelaLogin">
-
     <ImageView
         android:id="@+id/login"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:src="@drawable/login"
+        android:src="@drawable/log"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/FacaSeuLogin"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="180dp"
+        android:text="Faça Seu Login"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
-        android:id="@+id/edUsuario"
+        android:id="@+id/edEmailLogin"
         android:layout_width="390dp"
         android:layout_height="50dp"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="180dp"
-        android:hint="Usuario"
-        android:text="Usuário"
-        android:inputType="text"
-        android:textColorHint="#FFFFFF"
+        android:layout_marginTop="200dp"
+        android:hint="E-mail"
+        android:maxLength="40"
+        android:inputType="textEmailAddress"
         android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         android:textStyle="italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/edSenhaLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="390dp"
+        android:layout_height="50dp"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="1dp"
-        android:ems="10"
+        android:layout_marginTop="20dp"
+        android:maxLength="10"
+
+        android:hint="Senha"
         android:inputType="textPassword"
-        android:text="Senha"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edUsuario" />
+        app:layout_constraintTop_toBottomOf="@+id/edEmailLogin" />
 
     <Button
         android:id="@+id/btEntrar"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
-        android:layout_marginTop="280dp"
+        android:layout_marginTop="320dp"
         android:text="cadastrar"
         android:textStyle="italic"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,7 +80,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
-        android:layout_marginTop="320dp"
+        android:layout_marginTop="360dp"
         android:text="@string/manter_conectado"
         android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,5 +96,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/manterConectado" />
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

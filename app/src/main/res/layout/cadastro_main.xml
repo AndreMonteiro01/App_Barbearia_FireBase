@@ -1,47 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#0B182C"
     tools:context=".TelaCadastro">
 
    <ImageView
-       android:id="@+id/cadastro"
+       android:id="@+id/cadas"
        android:layout_width="200dp"
        android:layout_height="200dp"
-       android:src="@drawable/cadastro"
+       android:src="@drawable/cadas"
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintEnd_toEndOf="parent"
        app:layout_constraintTop_toTopOf="parent"/>
+
+   <!--   android:drawableLeft="@drawable/nome_completo"-->
+
+   <TextView
+       android:id="@+id/Cadastro"
+       android:layout_width="200dp"
+       android:layout_height="50dp"
+       android:layout_marginStart="120dp"
+       android:layout_marginTop="200dp"
+       android:text="CADASTRO"
+       android:textColor="#FFFFFF"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
 
    <EditText
        android:id="@+id/edNomeCompleto"
        android:layout_width="390dp"
        android:layout_height="50dp"
-       android:layout_marginStart="5dp"
+       android:layout_marginStart="8dp"
+       android:layout_marginTop="24dp"
+
        android:hint="Nome Completo"
        android:inputType="text"
+       android:maxLength="40"
        android:textColor="#FFFFFF"
        android:textColorHint="#FFFFFF"
        android:textStyle="italic"
        app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toBottomOf="@+id/cadastro" />
+       app:layout_constraintTop_toBottomOf="@+id/cadas" />
 
    <EditText
        android:id="@+id/edEmail"
        android:layout_width="390dp"
        android:layout_height="50dp"
        android:layout_marginStart="5dp"
-       android:layout_marginTop="5dp"
+       android:layout_marginTop="60dp"
+       android:maxLength="40"
+
        android:hint="E-mail"
        android:inputType="textEmailAddress"
        android:textColor="#FFFFFF"
        android:textColorHint="#FFFFFF"
        android:textStyle="italic"
        app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toBottomOf="@+id/edNomeCompleto" />
+       app:layout_constraintTop_toTopOf="@+id/edNomeCompleto"/>
+   <!--       android:drawableRight="@drawable/email"-->
 
    <EditText
        android:id="@+id/edSenha"
@@ -50,6 +75,7 @@
        android:layout_marginStart="5dp"
        android:layout_marginTop="15dp"
        android:hint="Senha"
+       android:maxLength="10"
        android:inputType="textPassword"
        android:textColor="#FFFFFF"
        android:textColorHint="#FFFFFF"
@@ -62,10 +88,12 @@
        android:layout_width="180dp"
        android:layout_height="wrap_content"
        android:layout_marginStart="70dp"
-       android:layout_marginTop="10dp"
+       android:layout_marginTop="65dp"
        android:text="cadastrar"
+       android:onClick="cadastrarOnClick"
        android:textStyle="italic"
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintTop_toBottomOf="@+id/edSenha" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

@@ -41,7 +41,6 @@
        android:layout_height="50dp"
        android:layout_marginStart="8dp"
        android:layout_marginTop="24dp"
-
        android:hint="Nome Completo"
        android:inputType="text"
        android:maxLength="40"
@@ -58,7 +57,6 @@
        android:layout_marginStart="5dp"
        android:layout_marginTop="60dp"
        android:maxLength="40"
-
        android:hint="E-mail"
        android:inputType="textEmailAddress"
        android:textColor="#FFFFFF"

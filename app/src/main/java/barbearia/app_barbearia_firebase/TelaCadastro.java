@@ -21,6 +21,7 @@ public class TelaCadastro extends AppCompatActivity {
     Usuario usuario;
     boolean validardados;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,9 +32,9 @@ public class TelaCadastro extends AppCompatActivity {
         IniciarComponentes();
 
         //Objetos para referenciar os componentes da tela.
-        EditText edNomeCompleto = findViewById(R.id.edNomeCompleto);
-        EditText edEmail = findViewById(R.id.edEmail);
-        EditText edSenha = findViewById(R.id.edSenha);
+         nomeCompleto = findViewById(R.id.edNomeCompleto);
+         email = findViewById(R.id.edEmail);
+         senha = findViewById(R.id.edSenha);
         Button btCadastrar = findViewById(R.id.btCadastrar);
 
         //Criar evento do botão CADASTRAR.
@@ -46,9 +47,9 @@ public class TelaCadastro extends AppCompatActivity {
                 if (validardados) {
                     usuario = new Usuario();
 
-                    usuario.setNomeCompleto(edNomeCompleto.getText().toString());
-                    usuario.setEmail(edEmail.getText().toString());
-                    usuario.setSenha(edSenha.getText().toString());
+                    usuario.setNomeCompleto(nomeCompleto.getText().toString());
+                    usuario.setEmail(email.getText().toString());
+                    usuario.setSenha(senha.getText().toString());
 
                     Toast.makeText(TelaCadastro.this,
                             "Cadastrado com sucesso", Toast.LENGTH_LONG).show();

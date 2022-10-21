@@ -9,6 +9,8 @@ public class Usuario extends AppCompatActivity {
     private String nomeCompleto;
     private String email;
     private String senha;
+    private String emailLogin;
+    private String senhaLogin;
 
     //Construtor.
     public String getNomeCompleto() {
@@ -34,4 +36,12 @@ public class Usuario extends AppCompatActivity {
     public void setSenha(String senha) {
         this.senha = senha;
     }
+
+    public String getEmailLogin(){return emailLogin; }
+
+    public void setEmailLogin(String emailLogin) { this.emailLogin = emailLogin; }
+
+    public String getSenhaLogin(){return senhaLogin; }
+
+    public  void setSenhaLogin(String senhaLogin) {this.senhaLogin = senhaLogin; }
 }

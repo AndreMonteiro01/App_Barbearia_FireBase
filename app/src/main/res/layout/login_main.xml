@@ -87,7 +87,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btCrieConta"
+        android:id="@+id/btCriarConta"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"

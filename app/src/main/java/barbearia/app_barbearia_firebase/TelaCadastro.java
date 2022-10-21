@@ -21,7 +21,6 @@ public class TelaCadastro extends AppCompatActivity {
     Usuario usuario;
     boolean validardados;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,13 +34,12 @@ public class TelaCadastro extends AppCompatActivity {
          nomeCompleto = findViewById(R.id.edNomeCompleto);
          email = findViewById(R.id.edEmail);
          senha = findViewById(R.id.edSenha);
-        Button btCadastrar = findViewById(R.id.btCadastrar);
+         btCadastrar = findViewById(R.id.btCadastrar);
 
         //Criar evento do botão CADASTRAR.
         btCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 validardados = validarCampos();
 
                 if (validardados) {
